@@ -1,0 +1,10 @@
+[
+  {
+    "step": 0,
+    "tool": "Read",
+    "input": "x.py",
+    "output_summary": "ok",
+    "timestamp": "2026-04-22T10:01:16.889626Z",
+    "success": true
+  }
+]

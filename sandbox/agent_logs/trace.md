@@ -1,0 +1,21 @@
+# Agent Trace Log
+
+---
+
+STEP: 1
+
+GOAL:
+
+FILES READ:
+
+FILES MODIFIED:
+
+TOOLS USED:
+
+DECISION:
+
+RESULT:
+
+NEXT PLAN:
+
+---

@@ -1,0 +1,31 @@
+{
+  "project": "unknown",
+  "model": "unknown",
+  "date": "",
+  "score": 0.999,
+  "grade": "A",
+  "metrics": {
+    "completion": 1.0,
+    "efficiency": 0.996,
+    "tool_success": 1.0,
+    "recovery": 1.0,
+    "diff_quality": 1.0,
+    "planning_quality": 1.0,
+    "composite": 0.999,
+    "completion_detail": "1/1 steps successful",
+    "efficiency_detail": "1 completed / 1 productive (raw=1.000)",
+    "tool_success_detail": "No tool calls recorded",
+    "recovery_detail": "No failures to recover from",
+    "diff_quality_detail": "No diffs recorded",
+    "planning_quality_detail": "No write calls (nothing to plan for)"
+  },
+  "total_steps": 1,
+  "productive_steps": 1,
+  "total_tool_calls": 0,
+  "failed_tool_calls": 0,
+  "lines_added": 0,
+  "lines_removed": 0,
+  "wasted_lines": 0,
+  "negative_interventions": 0,
+  "positive_interventions": 0
+}
