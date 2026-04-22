@@ -2,7 +2,7 @@
 
 Benchmark any AI agent session by scoring structured log files.
 
-Works with Claude Code, Cursor, Blackbox, Copilot — any agent that writes code.
+Works with Claude Code, Cursor, Copilot — any agent that writes code.
 
 ---
 
@@ -102,7 +102,7 @@ harness init agent_logs
 
 ## Example
 
-See `examples/auto_eda/` — a real benchmark from a Blackbox AI session that built
+See `examples/auto_eda/` — a real benchmark from a AI session that built
 a full Auto-EDA platform (React + Flask + Celery). Final score: **0.846 / B+**.
 
 ---
@@ -130,6 +130,46 @@ cp skills/harness-score.md ~/.claude/skills/
 ```
 
 Then use `/harness init`, `/harness log`, `/harness score` in any Claude Code session.
+
+---
+
+## Live Dashboard (MCP)
+
+A companion package, [`harness-mcp/`](./harness-mcp/), turns the same logs into a
+**live browser dashboard** that Claude can also query through MCP tools — useful
+for inspecting scores, tracing failed steps, or pointing at wasted diffs without
+leaving the chat.
+
+```
+Claude Code  ◀── stdio ──▶  harness-mcp  ◀── filesystem ──▶  agent_logs/*
+                                 │
+                                 └── http://127.0.0.1:3737  ← you open this
+```
+
+### Quick start
+
+```cmd
+:: install (one time)
+pip install -e .
+pip install -e ./harness-mcp
+
+:: register with Claude Code (one time)
+claude mcp add harness --scope user -- harness-mcp
+
+:: install the skill so Claude knows when to use it
+copy harness-mcp\skills\harness-dashboard.md %USERPROFILE%\.claude\skills\
+```
+
+Restart Claude Code, then prompt:
+
+> *List my harness sessions.*
+
+The MCP server boots, the dashboard comes up at `http://127.0.0.1:3737`, and
+the bottom-right badge reads `harness MCP · connected`. Eight tools are
+available: `list_sessions`, `refresh`, `get_session`, `get_score`, `get_trace`,
+`get_tool_calls`, `get_diffs`, `get_dashboard_url`.
+
+See [`harness-mcp/README.md`](./harness-mcp/README.md) for full details and troubleshooting.
 
 ---
 
