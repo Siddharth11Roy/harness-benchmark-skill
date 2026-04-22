@@ -1,0 +1,9 @@
+{
+  "harness_version": "1.0",
+  "model": "claude-opus-4-7",
+  "project": "sample_session",
+  "date": "2026-04-22",
+  "build_success": true,
+  "task_prompt": "build a sample",
+  "user_interventions": []
+}

@@ -1,0 +1,9 @@
+{
+  "harness_version": "1.0",
+  "calls": [
+    {"step": 1, "tool": "Write", "input": "main.py", "output_summary": "wrote 12 lines", "success": true},
+    {"step": 2, "tool": "Read", "input": "main.py", "output_summary": "read file", "success": true},
+    {"step": 2, "tool": "Edit", "input": "main.py", "output_summary": "edited handler", "success": true},
+    {"step": 3, "tool": "Write", "input": "test_main.py", "output_summary": "wrote test", "success": true}
+  ]
+}

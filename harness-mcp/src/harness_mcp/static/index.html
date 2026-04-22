@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>harness dashboard</title>
+<link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+<aside id="sidebar">
+  <header>
+    <h1>harness</h1>
+    <button id="refresh" title="Rescan logs root">refresh</button>
+  </header>
+  <div id="root-path"></div>
+  <ul id="sessions"></ul>
+</aside>
+<main id="main">
+  <section id="empty">
+    <h2>No session selected</h2>
+    <p>Pick a session on the left, or run <code>harness init agent_logs</code> in a project under the watched root.</p>
+  </section>
+  <section id="detail" hidden>
+    <header id="detail-header"></header>
+    <section id="metrics"></section>
+    <section class="panel"><h3>Trace</h3><div id="trace"></div></section>
+    <section class="panel"><h3>Tool calls</h3><div id="calls"></div></section>
+    <section class="panel"><h3>Diffs</h3><div id="diffs"></div></section>
+  </section>
+</main>
+<div id="badge" class="badge dim">harness MCP · …</div>
+<script src="/static/app.js"></script>
+</body>
+</html>
